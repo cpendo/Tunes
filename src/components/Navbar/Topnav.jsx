@@ -11,12 +11,12 @@ const Topnav = () => {
   };
 
   return (
-    <>
-      <div className="bg-blue flex flex-row justify-between items-center py-3 px-4">
+    <div>
+      <div className="bg-blue w-full flex flex-row justify-between items-center text-white py-3 px-4">
         <div className="font-primary font-black ">
           <Link to="/" className="flex flex-row gap-2 items-center">
-            <img src={Logo} alt="logo" className="w-16" />
-            <h1 className="text-6xl">Tunes</h1>
+            <img src={Logo} alt="logo" className="w-14" />
+            <h1 className="text-4xl">Tunes</h1>
           </Link>
         </div>
 
@@ -24,7 +24,7 @@ const Topnav = () => {
           className="hover:text-orange p-2 rounded-md"
           onClick={handleClick}
         >
-          <i className="fa-solid fa-bars text-5xl"></i>
+          <i className="fa-solid fa-bars text-3xl"></i>
         </button>
       </div>
 
@@ -45,13 +45,13 @@ const Topnav = () => {
                 }
               >
                 <i className={`fa-solid fa-${link.icon} fa-lg w-8`}></i>
-                <span className="text-3xl">{link.name}</span>
+                <span className="text-lg">{link.name}</span>
               </NavLink>
             </li>
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
