@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { genres } from "../assets/constants";
 import { SongCard } from "../components";
+import { useGetTopChartsQuery } from "../features/shazamCoreApi";
 
 const Discover = () => {
+  const {data, isFetching} = useGetTopChartsQuery();
+
+console.log(data)
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedGenre, setSelectedGenre] = useState(genres[0].title);
 
